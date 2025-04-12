@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braver | Карточка товара</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <header class="header" data-js-header>
+        <div class="header__inner container">
+            <a 
+                class="header__logo logo"  
+                href="/" 
+                aria-label="Home"
+                title="Home"
+            >
+                <img 
+                    class="logo__image"
+                    src="./images/logo.svg" 
+                    alt="" 
+                    width="207" height="44"
+                >
+            </a>
+            <div class="header__overlay" data-js-header-overlay>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-item has-submenu">
+                            <a class="header__menu-link parent-link" href="#">Каталог</a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Гарантийное обслуживание</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Доставка</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Документы и сертификаты</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Сервисные центры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item has-submenu">
+                            <a class="header__menu-link parent-link" href="#">О заводе</a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Гарантийное обслуживание</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Доставка</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Документы и сертификаты</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Сервисные центры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">Техника в наличии</a>
+                        </li>
+                        <li class="header__menu-item has-submenu">
+                            <a class="header__menu-link parent-link" href="#">Сервис и гарантия</a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Гарантийное обслуживание</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Доставка</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Документы и сертификаты</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Сервисные центры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item has-submenu">
+                            <a class="header__menu-link parent-link" href="#">Покупателям</a>
+                            <ul class="submenu">
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Гарантийное обслуживание</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Доставка</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Документы и сертификаты</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a class="submenu__link" href="#">Сервисные центры</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="header__menu-link" href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__contacts">
+                    <a class="header__phone" href="tel:89007777777" target="_blank">8 (900) 777-77-77</a>
+                    <a class="header__callback button button--callback open-modal-link" href="#modal-callback">Заказать звонок</a>
+                    <div class="header__lang lang">
+                        <div class="lang__item selected">RU</div>
+                        <div class="lang__item">EN</div>
+                    </div>
+                </div>
+            </div>
+            <button 
+                class="header__burger-button burger-button visible-tablet"
+                type="button"
+                aria-label="Open menu"
+                title="Open menu"
+                data-js-header-burger-button
+            >
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+                <span class="burger-button__line"></span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero__inner container-fluid">
+                <div class="hero__slider swiper mySwiper">
+                    <div class="hero__items swiper-wrapper">
+                        <div class="hero__item swiper-slide">
+                            <img
+                                class="hero__image"
+                                src="./images/hero/img-1.jpg"
+                                alt=""
+                                width="770" height="620" loading="lazy"
+                            />
+                        </div>
+                        <div class="hero__item swiper-slide"> 
+                            <div class="hero__video-player video-player" data-js-video-player>
+                                <video 
+                                    class="video-player__video" 
+                                    src="./videos/example.mp4"
+                                    width="770" height="620"
+                                    poster="./images/videos/video-poster-1.jpg"
+                                    data-js-video-player-video
+                                ></video>
+                                <div class="video-player__panel is-active" data-js-video-player-panel>
+                                    <button 
+                                        class="video-player__play-button"
+                                        type="button"
+                                        aria-label="Play video"
+                                        title="Play video"
+                                        data-js-video-player-play-button
+                                    >
+                                        <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18 9.26795C19.3333 10.0377 19.3333 11.9623 18 12.7321L3 21.3923C1.66667 22.1621 -1.05781e-06 21.1999 -9.90511e-07 19.6603L-2.33408e-07 2.33975C-1.6611e-07 0.800144 1.66667 -0.162106 3 0.607695L18 9.26795Z" fill="#202020"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero__item swiper-slide">
+                            <img
+                                class="hero__image"
+                                src="./images/hero/img-2.jpg"
+                                alt=""
+                                width="770" height="620" loading="lazy"
+                            />
+                        </div>
+                    </div>
+                    <div class="hero__button-next button__next swiper-button-next"></div>
+                    <div class="hero__button-prev button__prev swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog-details" aria-labelledby="catalog-details-title">
+            <div class="catalog-details__inner container">
+                <div class="catalog-details__content">
+                    <div class="catalog-details__breadcrumbs breadcrumbs">
+                        <ul class="breadcrumbs__list">
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">Главная</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">Каталог</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a class="breadcrumbs__link" href="#">Зерновозы</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                Зерновозы бортовые 46-60 м³ с вынесенной осью
+                            </li>
+                        </ul>
+                    </div> 
+                    <div class="catalog-details__body">
+                        <div class="catalog-details__block-title block-title  hidden-mobile">
+                            <h1 class="block-title__title h2" id="catalog-details-title">Зерновозы бортовые 46-60 м³ с вынесенной осью</h1>
+                        </div>
+                        <div class="catalog-details__info">
+                            <h2 class="h4">О полуприцепе</h2>
+                            <div class="catalog-details__description">
+                                <p>
+                                    Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Данный полуприцеп шторно-бортовой (крыша и бока полуприцепа сдвигаются отдельно), что очень удобно при погрузке-разгрузке как с боков полуприцепа, так и с верхней части. Для большего комфорта эксплуатации, с наружной стороны имеется специальная ручка предназначенная для сдвигания бокового тента.
+                                </p>
+                                <p>
+                                    Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="catalog-details__intro">
+                            <img 
+                                class="catalog-details__image"
+                                src="./images/content-img.jpg" 
+                                alt="" 
+                                width="1034" height="402" loading="lazy"
+                            >
+                        </div>
+                    </div>
+                    <div class="catalog-details__aside">
+                        <div class="catalog-details__block-title block-title visible-mobile">
+                            <h2 class="block-title__title" >Зерновозы бортовые 46-60 м³ с вынесенной осью</h2>
+                        </div>
+                        <div class="catalog-details__summary summary">
+                            <div class="summary__item">
+                                <dt class="summary__key">Объем</dt>
+                                <dd class="summary__value">46 - 60³</dd>
+                            </div>
+                            <div class="summary__item">
+                                <dt class="summary__key">Количество осей</dt>
+                                <dd class="summary__value">3 оси</dd>
+                            </div>
+                            <div class="summary__item">
+                                <dt class="summary__key">Снаряженная масса</dt>
+                                <dd class="summary__value">от 5 900 кг</dd>
+                            </div>
+                            <div class="summary__item">
+                                <dt class="summary__key">Стоимость</dt>
+                                <dd class="summary__value"><span>4 120 000 ₽</span></dd>
+                            </div>
+                            <div class="summary__item">
+                                <span>Технические характеристики</span>
+                            </div>
+                        </div>
+                        <div class="catalog-details__actions">
+                            <a class="button button--arrow button--arrow-dark open-modal-link" href="#modal-request">Оставить заявку</a>
+                            <a class="button button--arrow button--arrow-gray open-modal-link" href="#modal-callback">Получить консультацию</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-details__tabs tabs hidden-mobile" data-js-tabs>
+                    <header class="tabs__header">
+                        <div
+                            class="tabs__buttons"
+                            role="tablist"
+                            aria-labelledby="blog-category-title"
+                        >
+                            <button
+                                class="tabs__button is-active"
+                                id="tab-1"
+                                type="button"
+                                role="tab"
+                                aria-controls="tabpanel-1"
+                                data-js-tabs-button
+                                aria-selected="true"
+                            >
+                                Технические характеристики
+                            </button>
+                            <button
+                                class="tabs__button"
+                                id="tab-2"
+                                type="button"
+                                role="tab"
+                                aria-controls="tabpanel-2"
+                                data-js-tabs-button
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                Комплектация
+                            </button>
+                            <button
+                                class="tabs__button"
+                                id="tab-3"
+                                type="button"
+                                role="tab"
+                                aria-controls="tabpanel-3"
+                                data-js-tabs-button
+                                aria-selected="false"
+                                tabindex="-1"
+                            >
+                                Техническая документация
+                            </button>
+                        </div>
+                    </header>
+                    <div class="tabs__body">
+                        <div
+                            class="tabs__content is-active"
+                            id="tabpanel-1"
+                            aria-labelledby="tab-1"
+                            tabindex="0"
+                            data-js-tabs-content
+                        >
+                            <div class="specifications">
+                                <div class="specifications__items">
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Габаритные размеры</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>длина: 12 100 мм</li>
+                                                <li>ширина: 2 550 мм</li>
+                                                <li>высота: 3 310 мм</li>   
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Объём</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>46 - 60³</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Количество осей</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>4 оси</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Снаряженная масса</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>от 7 200 кг</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Количество секций</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>1 секция: 8 м³</li>
+                                                <li>2 секция: 10,3 м³</li>
+                                                <li>3 секция: 13,7 м³</li>   
+                                            </ul>
+                                            <p>Объемы секций указаны по порядку от ССУ</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Подвеска и шины</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>4 оси</li>
+                                                <li>2 оси подъёмные</li>
+                                                <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                <li>шины (на усмотрение производителя) размерностью </li>
+                                                <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Тормозная система</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>пневматическая двухконтурная</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Электрооборудование</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>электрооборудование Aspoeck / Hella / Ermax или аналог</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Высота ССУ</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>1 150 мм</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Окраска</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>обработка поверхности в дробеструйной камере</li>
+                                                <li>покрытие грунтом с содержанием антикоррозийных элементов</li>
+                                                <li>окраска премиальной эмалью</li>   
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="tabs__content"
+                            id="tabpanel-2"
+                            aria-labelledby="tab-2"
+                            tabindex="0"
+                            data-js-tabs-content
+                        >
+                            <div class="specifications">
+                                <div class="specifications__items">
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Габаритные размеры</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>длина: 12 100 мм</li>
+                                                <li>ширина: 2 550 мм</li>
+                                                <li>высота: 3 310 мм</li>   
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Объём</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>46 - 60³</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Количество осей</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>4 оси</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Подвеска и шины</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>4 оси</li>
+                                                <li>2 оси подъёмные</li>
+                                                <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                <li>шины (на усмотрение производителя) размерностью </li>
+                                                <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Тормозная система</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>пневматическая двухконтурная</p>
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="tabs__content"
+                            id="tabpanel-3"
+                            aria-labelledby="tab-3"
+                            tabindex="0"
+                            data-js-tabs-content
+                        >
+                            <div class="specifications">
+                                <div class="specifications__items">
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Габаритные размеры</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>длина: 12 100 мм</li>
+                                                <li>ширина: 2 550 мм</li>
+                                                <li>высота: 3 310 мм</li>   
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Объём</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>46 - 60³</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Количество осей</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>4 оси</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Снаряженная масса</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <p>от 7 200 кг</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Количество секций</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>1 секция: 8 м³</li>
+                                                <li>2 секция: 10,3 м³</li>
+                                                <li>3 секция: 13,7 м³</li>   
+                                            </ul>
+                                            <p>Объемы секций указаны по порядку от ССУ</p>
+                                        </div>
+                                    </div>
+                                    <div class="specifications__item">
+                                        <div class="specifications__left">
+                                            <p>Подвеска и шины</p>
+                                        </div>
+                                        <div class="specifications__right">
+                                            <ul>
+                                                <li>4 оси</li>
+                                                <li>2 оси подъёмные</li>
+                                                <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                <li>шины (на усмотрение производителя) размерностью </li>
+                                                <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="catalog-details__accordion visible-mobile">
+                    <div class="accordion-group">
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq" open>
+                                <summary class="accordion__summary accordion__summary--dark">
+                                    <h3 class="accordion__title accordion__title--dark">
+                                        <span role="term" aria-details="faq-1">Технические характеристики</span>
+                                    </h3>
+                                </summary>
+                            </details>
+                            <div
+                                class="accordion__content"
+                                id="faq-1"
+                                role="definition"
+                            >
+                                <div class="accordion__content-inner">
+                                    <div class="accordion__content-body accordion__content-body--dark">
+                                        <div class="specifications">
+                                            <div class="specifications__items">
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Габаритные размеры</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>длина: 12 100 мм</li>
+                                                            <li>ширина: 2 550 мм</li>
+                                                            <li>высота: 3 310 мм</li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Объём</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>46 - 60³</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество осей</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>4 оси</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Снаряженная масса</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>от 7 200 кг</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество секций</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>1 секция: 8 м³</li>
+                                                            <li>2 секция: 10,3 м³</li>
+                                                            <li>3 секция: 13,7 м³</li>   
+                                                        </ul>
+                                                        <p>Объемы секций указаны по порядку от ССУ</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Подвеска и шины</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>4 оси</li>
+                                                            <li>2 оси подъёмные</li>
+                                                            <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                            <li>шины (на усмотрение производителя) размерностью </li>
+                                                            <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Тормозная система</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>пневматическая двухконтурная</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p class="equipment">Электро<span>оборудование</span></p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>электрооборудование Aspoeck / Hella / Ermax или аналог</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Высота ССУ</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>1 150 мм</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Окраска</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>обработка поверхности в дробеструйной камере</li>
+                                                            <li>покрытие грунтом с содержанием антикоррозийных элементов</li>
+                                                            <li>окраска премиальной эмалью</li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="accordion__summary accordion__summary--dark">
+                                    <h3 class="accordion__title accordion__title--dark">
+                                        <span role="term" aria-details="faq-2">Комплектация</span>
+                                    </h3>
+                                </summary>
+                            </details>
+                            <div
+                                class="accordion__content"
+                                id="faq-2"
+                                role="definition"
+                            >
+                                <div class="accordion__content-inner">
+                                    <div class="accordion__content-body accordion__content-body--dark">
+                                        <div class="specifications">
+                                            <div class="specifications__items">
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Габаритные размеры</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>длина: 12 100 мм</li>
+                                                            <li>ширина: 2 550 мм</li>
+                                                            <li>высота: 3 310 мм</li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Объём</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>46 - 60³</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество осей</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>4 оси</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Снаряженная масса</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>от 7 200 кг</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество секций</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>1 секция: 8 м³</li>
+                                                            <li>2 секция: 10,3 м³</li>
+                                                            <li>3 секция: 13,7 м³</li>   
+                                                        </ul>
+                                                        <p>Объемы секций указаны по порядку от ССУ</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Подвеска и шины</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>4 оси</li>
+                                                            <li>2 оси подъёмные</li>
+                                                            <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                            <li>шины (на усмотрение производителя) размерностью </li>
+                                                            <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Тормозная система</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>пневматическая двухконтурная</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Высота ССУ</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>1 150 мм</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Окраска</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>обработка поверхности в дробеструйной камере</li>
+                                                            <li>покрытие грунтом с содержанием антикоррозийных элементов</li>
+                                                            <li>окраска премиальной эмалью</li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <details class="accordion__details" name="faq">
+                                <summary class="accordion__summary accordion__summary--dark">
+                                    <h3 class="accordion__title accordion__title--dark">
+                                        <span role="term" aria-details="faq-3">Техническая документация</span>
+                                    </h3>
+                                </summary>
+                            </details>
+                            <div
+                                class="accordion__content"
+                                id="faq-3"
+                                role="definition"
+                            >
+                                <div class="accordion__content-inner">
+                                    <div class="accordion__content-body accordion__content-body--dark">
+                                        <div class="specifications">
+                                            <div class="specifications__items">
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Габаритные размеры</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>длина: 12 100 мм</li>
+                                                            <li>ширина: 2 550 мм</li>
+                                                            <li>высота: 3 310 мм</li>   
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Объём</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>46 - 60³</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество осей</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>4 оси</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Снаряженная масса</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <p>от 7 200 кг</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Количество секций</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>1 секция: 8 м³</li>
+                                                            <li>2 секция: 10,3 м³</li>
+                                                            <li>3 секция: 13,7 м³</li>   
+                                                        </ul>
+                                                        <p>Объемы секций указаны по порядку от ССУ</p>
+                                                    </div>
+                                                </div>
+                                                <div class="specifications__item">
+                                                    <div class="specifications__left">
+                                                        <p>Подвеска и шины</p>
+                                                    </div>
+                                                    <div class="specifications__right">
+                                                        <ul>
+                                                            <li>4 оси</li>
+                                                            <li>2 оси подъёмные</li>
+                                                            <li>тормозные механизмы барабанного / дискового типа</li>   
+                                                            <li>шины (на усмотрение производителя) размерностью </li>
+                                                            <li>385/65 R22,5 с диском - 8 + 1 шт.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="services" aria-labelledby="services-title">
+           <div class="services__inner container">
+            <div class=" block-title visually-hidden">
+                <h2 class="block-title__title" id="services-title">Преимущества</h2>
+            </div>
+            <div class="accordion-group">
+                <div class="accordion accordion__light">
+                    <details class="accordion__details" name="faq-serv" open>
+                        <summary class="accordion__summary accordion__summary--light">
+                            <div class="accordion__num">01</div>
+                            <h3 class="accordion__title h2 accordion__title--light">
+                                <span role="term" aria-details="faq-serv-1">Доставка</span>
+                            </h3>
+                        </summary>
+                    </details>
+                    <div
+                        class="accordion__content"
+                        id="faq-serv-1"
+                        role="definition"
+                    >
+                        <div class="accordion__content-inner">
+                            <div class="accordion__content-body accordion__content-body--light">
+                                <div class="services-group">
+                                    <div class="services-group__info">
+                                        <p>
+                                            Компания Braver доставит прицепную технику до адреса Вашей компании, условия доставки обсуждаются индивидуально с учётом количества приобретаемой техники и Вашей территориальной удаленности.
+                                        </p>
+                                        <span>Мы доставляем в города:</span>
+                                        <ul>
+                                            <li>Москва</li>
+                                            <li>Санкт-Петербург</li>
+                                            <li>Нижний Новгород</li>
+                                            <li>Екатеринбург</li>
+                                            <li>Владивосток</li>
+                                            <li>Новосибирск</li>
+                                            <li>Казань</li>
+                                            <li>Киров</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion__light">
+                    <details class="accordion__details" name="faq-serv">
+                        <summary class="accordion__summary accordion__summary--light">
+                            <div class="accordion__num">02</div> 
+                            <h3 class="accordion__title h2 accordion__title--light">
+                                <span role="term" aria-details="faq-serv-2">оплата</span>
+                            </h3>
+                        </summary>
+                    </details>
+                    <div
+                        class="accordion__content accordion__content--light"
+                        id="faq-serv-2"
+                        role="definition"
+                    >
+                        <div class="accordion__content-inner">
+                            <div class="accordion__content-body accordion__content-body--light">
+                                <div class="services-group">
+                                    <div class="services-group__info">
+                                        <p>
+                                            Компания Braver доставит прицепную технику до адреса Вашей компании, условия доставки обсуждаются индивидуально с учётом количества приобретаемой техники и Вашей территориальной удаленности.
+                                        </p>
+                                        <span>Мы доставляем в города:</span>
+                                        <ul>
+                                            <li>Москва</li>
+                                            <li>Санкт-Петербург</li>
+                                            <li>Нижний Новгород</li>
+                                            <li>Екатеринбург</li>
+                                            <li>Владивосток</li>
+                                            <li>Новосибирск</li>
+                                            <li>Казань</li>
+                                            <li>Киров</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion__light">
+                    <details class="accordion__details" name="faq-serv">
+                        <summary class="accordion__summary accordion__summary--light">
+                            <div class="accordion__num">03</div>
+                            <h3 class="accordion__title h2 accordion__title--light">
+                                <span role="term" aria-details="faq-serv-3">гарантии</span>
+                            </h3>
+                        </summary>
+                    </details>
+                    <div
+                        class="accordion__content"
+                        id="faq-serv-3"
+                        role="definition"
+                    >
+                        <div class="accordion__content-inner">
+                            <div class="accordion__content-body accordion__content-body--light">
+                                <div class="services-group">
+                                    <div class="services-group__info">
+                                        <p>
+                                            Компания Braver доставит прицепную технику до адреса Вашей компании, условия доставки обсуждаются индивидуально с учётом количества приобретаемой техники и Вашей территориальной удаленности.
+                                        </p>
+                                        <span>Мы доставляем в города:</span>
+                                        <ul>
+                                            <li>Москва</li>
+                                            <li>Санкт-Петербург</li>
+                                            <li>Нижний Новгород</li>
+                                            <li>Екатеринбург</li>
+                                            <li>Владивосток</li>
+                                            <li>Новосибирск</li>
+                                            <li>Казань</li>
+                                            <li>Киров</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+        </div> 
+
+        <section class="catalog-gallery" aria-labelledby="gallery-title">
+            <div class="catalog-gallery__inner container">
+                <div class="catalog-gallery__header">
+                    <div class="catalog-gallery__block-title block-title">
+                        <h2 class="block-title__title" id="gallery-title">Может быть интересно</h2>
+                    </div>
+                    <div class="custom-navigation">
+                        <div class="catalog-gallery__button-next button__next swiper-button-next"></div>
+                        <div class="catalog-gallery__button-prev button__prev swiper-button-prev"></div>
+                    </div>
+                </div>
+                <div class="catalog-gallery__body">
+                    <div class="catalog-gallery__slider swiper mySwiperTwo">
+                        <div class="catalog-gallery__items swiper-wrapper">
+                            <div class="catalog-gallery__item swiper-slide">
+                                <img
+                                    class="catalog-gallery__image"
+                                    src="./images/catalog/1.jpg"
+                                    alt=""
+                                    width="507" height="325" loading="lazy"
+                                />
+
+                                <div class="catalog-gallery__content">
+                                    <h3 class="catalog-gallery__title h4">Зерновозы бортовые 46-60 м3 с вынесенной осью</h3>
+                                    <div class="catalog-gallery__summary summary">
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Объем</dt>
+                                            <dd class="summary__value">46 - 60³</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Количество осей</dt>
+                                            <dd class="summary__value">3 оси</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Снаряженная масса</dt>
+                                            <dd class="summary__value">от 5 900 кг</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Стоимость</dt>
+                                            <dd class="summary__value"><span>4 120 000 ₽</span></dd>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-gallery__item swiper-slide">
+                                <span class="available">В наличии</span>
+                                <img
+                                    class="catalog-gallery__image"
+                                    src="./images/catalog/2.jpg"
+                                    alt=""
+                                    width="507" height="325" loading="lazy"
+                                />
+                                <div class="catalog-gallery__content">
+                                    <h3 class="catalog-gallery__title h4">Бортовой полуприцеп 13,62 м</h3>
+                                    <div class="catalog-gallery__summary summary">
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Объем</dt>
+                                            <dd class="summary__value">46 - 60³</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Количество осей</dt>
+                                            <dd class="summary__value">3 оси</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Снаряженная масса</dt>
+                                            <dd class="summary__value">от 5 900 кг</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Стоимость</dt>
+                                            <dd class="summary__value"><span>4 120 000 ₽</span></dd>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-gallery__item swiper-slide">
+                                <img
+                                    class="catalog-gallery__image"
+                                    src="./images/catalog/3.jpg"
+                                    alt=""
+                                    width="507" height="325" loading="lazy"
+                                />
+                                <div class="catalog-gallery__content">
+                                    <h3 class="сatalog-gallery__title h4">Облегченные зерновозы бортовые 46-60 м3</h3>
+                                    <div class="сatalog-gallery__summary summary">
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Объем</dt>
+                                            <dd class="summary__value">46 - 60³</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Количество осей</dt>
+                                            <dd class="summary__value">3 оси</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Снаряженная масса</dt>
+                                            <dd class="summary__value">от 5 900 кг</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Стоимость</dt>
+                                            <dd class="summary__value"><span>4 120 000 ₽</span></dd>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-gallery__item swiper-slide">
+                                <img
+                                    class="catalog-gallery__image"
+                                    src="./images/catalog/1.jpg"
+                                    alt=""
+                                    width="507" height="325" loading="lazy"
+                                />
+
+                                <div class="catalog-gallery__content">
+                                    <h3 class="catalog-gallery__title h4">Зерновозы бортовые 46-60 м3 с вынесенной осью</h3>
+                                    <div class="catalog-gallery__summary summary">
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Объем</dt>
+                                            <dd class="summary__value">46 - 60³</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Количество осей</dt>
+                                            <dd class="summary__value">3 оси</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Снаряженная масса</dt>
+                                            <dd class="summary__value">от 5 900 кг</dd>
+                                        </div>
+                                        <div class="summary__item">
+                                            <dt class="summary__key">Стоимость</dt>
+                                            <dd class="summary__value"><span>4 120 000 ₽</span></dd>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="reviews" aria-labelledby="reviews-title">
+            <div class="reviews__inner container">
+                <div class="reviews__header">
+                    <div class="block-title">
+                        <h2 class="block-title__title" id="reviews-title">отзывы</h2>
+                    </div>
+                    <a class="reviews__link" href="#">Читать все отзывы</a>
+                </div>
+                <div class="reviews__body">
+                    <div class="reviews__items">
+                        <div class="reviews__item">
+                            <div class="reviews-block">
+                                <div class="reviews-block__inner">
+                                    <img
+                                        class="reviews-block__image"
+                                        src="./images/reviews/1.jpg"
+                                        alt=""
+                                        width="81" height="123" loading="lazy"
+                                    />
+                                    <div class="reviews-block__content">
+                                        <h3 class="reviews-block__title h4">Имя Фамилия / Название компании</h3>
+                                        <div class="reviews-block__description">
+                                            <p>
+                                                Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.
+                                            </p>
+                                        </div>
+                                        <a class="reviews-block__link" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews-block">
+                                <div class="reviews-block__inner">
+                                    <img
+                                        class="reviews-block__image"
+                                        src="./images/reviews/1.jpg"
+                                        alt=""
+                                        width="81" height="123" loading="lazy"
+                                    />
+                                    <div class="reviews-block__content">
+                                        <h3 class="reviews-block__title h4">Имя Фамилия / Название компании</h3>
+                                        <div class="reviews-block__description">
+                                            <p>
+                                                Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая.
+                                            </p>
+                                        </div>
+                                        <a class="reviews-block__link" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews-block">
+                                <div class="reviews-block__inner">
+                                    <img
+                                        class="reviews-block__image"
+                                        src="./images/reviews/1.jpg"
+                                        alt=""
+                                        width="81" height="123" loading="lazy"
+                                    />
+                                    <div class="reviews-block__content">
+                                        <h3 class="reviews-block__title h4">Имя Фамилия / Название компании</h3>
+                                        <div class="reviews-block__description">
+                                            <p>
+                                                Полуприцеп Т4-16V/VK предназначен для перевозки грузов массой до 27 000 килограммов, при этом объем кузова равен 110,6 кубическим метрам. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр. Особое внимания заслуживает тентовая ткань, обладающая плотностью, равной 900 граммов на квадратный метр.
+                                            </p>
+                                        </div>
+                                        <a class="reviews-block__link" href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__action">
+                    <a class="reviews__button button button--arrow button--arrow-dark" href="#">Оставить отзыв</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="webform-block" aria-labelledby="webform-title">
+            <div class="webform-block__inner container">
+                <div class="webform-block__left">
+                    <div class="block-title">
+                        <h2 class="block-title__title ">Поможем подобрать модель и комплектацию техники</h2>
+                        <div class="block-title__description">
+                            <p>
+                                Оставьте свои контактные данные, и наш менеджер свяжется с Вами в ближайшее рабочее время
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="webform-block__right">
+                    <form class="feedback-form" action="/">
+                        <div class="feedback-form__cell field">
+                            <input 
+                                class="field__control"
+                                id="firstName"
+                                placeholder="Ваше имя"
+                                required
+                            >
+                        </div>
+                        <div class="feedback-form__cell field">
+                            <input 
+                                class="field__control"
+                                id="phoneNumber"
+                                placeholder="+7 (___) ___-__-__"
+                                data-js-input-mask="{+7}(000) 000-00-00"
+                                required
+                            >
+                        </div>
+                        <div class="feedback-form__cell field">
+                            <input 
+                                class="field__control"
+                                id="email"
+                                placeholder="Email"
+                                required
+                                type="email"
+                            >
+                        </div>
+                        <div class="feedback-form__cell">
+                            <div class="feedback-form__actions">
+                                <div class="feedback-form__agreement">
+                                    <label class="checkbox">
+                                        <input 
+                                            class="checkbox__input"
+                                            type="checkbox"
+                                            required
+                                        >
+                                        <span class="checkbox__label">Нажимая на кнопку, я принимаю условия <a href="#">Политики конфиденциальности</a></span>
+                                    </label>
+                                </div>
+                                <button 
+                                    class="feedback-form__submit-button button button--arrow button--arrow-dark"
+                                    type="submit"
+                                >Отправить</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__inner container">
+            <div class="footer__body">
+                <div class="footer__extra">
+                    <div class="footer__extra-column">
+                        <div class="footer__extra-group">
+                            <a 
+                                class="footer__logo logo"  
+                                href="/" 
+                                aria-label="Home"
+                                title="Home"
+                            >
+                                <img 
+                                    class="logo__image"
+                                    src="./images/logo.svg" 
+                                    alt="" 
+                                    width="207" height="44"
+                                >
+                            </a>
+                            <div class="footer__search search">
+                                <input class="search__input" type="text" id="search-input" placeholder="Поиск">
+                            </div>
+                            <a class="footer__callback button button--callback open-modal-link visible-tablet-s" href="#modal-callback">Заказать звонок</a>
+                        </div>
+                        <div class="footer__extra-group hidden-mobile">
+                            <div class="card-yandex">
+                                <div class="card-yandex__wrap">
+                                    <img 
+                                        class="yandex__image"
+                                        src="./icons/yandex.svg" 
+                                        alt="" 
+                                        width="33" height="33"
+                                    >
+                                    <div class="rating-num">
+                                        4,4
+                                    </div>
+                                    <div class="rating-view">
+                                        <div 
+                                            class="rating-view__star is-active"
+                                            aria-label="Rating 5 star"
+                                            title="Rating 5 star"
+                                        >
+                                    
+                                        </div>
+                                        <div class="rating-view__star is-active"></div>
+                                        <div class="rating-view__star is-active"></div>
+                                        <div class="rating-view__star is-active"></div>
+                                        <div class="rating-view__star"></div>
+                                    </div>
+                                </div>
+                                <p>Рейтинг организации в Яндексе</p>
+                            </div>
+                            <div class="card-yandex__item">
+                                <div class="footer__soc1al">
+                                    <ul class="soc1als__list">
+                                        <li class="soc1als__item">
+                                            <a 
+                                                class="soc1als__link" 
+                                                href="https://vk.com" 
+                                                target="_blank" 
+                                                aria-label="Vk" 
+                                                title="Vk"
+                                            >
+                                                <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15.1383 7.2265C14.6811 7.05626 14.6811 6.40606 14.6528 5.95328C14.5385 4.34047 15.1099 1.87824 14.4242 0.831412C13.9387 0.208384 11.5954 0.265435 10.1673 0.350558C9.7669 0.407608 9.28142 0.491827 8.93856 0.662073C8.59571 0.832319 8.25286 1.11485 8.25286 1.36932C8.25286 1.73698 9.11045 1.68083 9.42404 2.16169C9.7669 2.67152 9.7669 3.77449 9.7669 4.68006C9.7669 5.72689 9.59501 7.11421 9.16713 7.17036C8.50977 7.19843 8.13857 6.54733 7.79572 6.06648C7.11001 5.13284 6.42431 3.97191 5.90957 2.83995C5.65266 2.2459 5.50912 1.5948 5.13793 1.34034C4.5665 0.943703 3.53795 0.91563 2.53773 0.943703C1.62346 0.971775 0.308729 0.85858 0.0518181 1.39648C-0.148408 1.99053 0.280387 2.55651 0.508955 3.03827C1.68014 5.55664 2.93727 7.76441 4.48056 9.85807C5.90957 11.8105 7.25173 13.3671 9.88027 14.1876C10.6236 14.414 13.8802 15.0651 14.5376 14.1876C14.7661 13.848 14.7095 13.0837 14.8237 12.5177C14.938 11.9517 15.0807 11.3858 15.6237 11.3577C16.0809 11.3296 16.3378 11.7253 16.624 12.0088C16.9385 12.3203 17.1954 12.5748 17.4239 12.8582C17.967 13.3961 18.5384 14.1314 19.2241 14.4149C20.1668 14.8115 21.6241 14.6983 22.9955 14.6413C24.11 14.6132 24.91 14.3868 24.996 13.7357C25.0536 13.2259 24.4812 12.4905 24.1384 12.0658C23.2808 11.019 22.8812 10.7075 21.9094 9.74488C21.4806 9.32017 20.9375 8.86739 20.9375 8.35846C20.9092 8.04695 21.1661 7.76441 21.3946 7.4529C22.3949 5.98135 23.3951 4.93452 24.3093 3.40593C24.5663 2.95315 25.1669 1.90632 24.9384 1.39648C24.6815 0.830507 23.2524 0.999847 22.3665 0.999847C21.2237 0.999847 19.738 0.914724 19.4518 1.14112C18.9087 1.50877 18.6802 2.10373 18.4232 2.66971C17.8518 3.97191 17.0802 5.30128 16.2802 6.29196C15.994 6.63155 15.4519 7.33879 15.1373 7.2256L15.1383 7.2265Z" fill="white"/>
+                                                </svg>   
+                                            </a>
+                                            
+                                        </li>
+                                        <li class="soc1als__item">
+                                            <a 
+                                                class="soc1als__link" 
+                                                href="https://t.me" 
+                                                target="_blank" 
+                                                aria-label="Telegram" 
+                                                title="Telegram"
+                                            >
+                                                <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21.015 0.333091L1.52726 7.89969C0.197304 8.43755 0.204998 9.18458 1.28326 9.51771L6.28654 11.0892L17.8627 3.73513C18.4101 3.39979 18.9102 3.58019 18.4991 3.94762L9.12013 12.4704H9.11793L9.12013 12.4715L8.775 17.6642C9.28061 17.6642 9.50373 17.4307 9.78731 17.1551L12.2175 14.7757L17.2725 18.5352C18.2045 19.052 18.8739 18.7864 19.1058 17.6664L22.4241 1.92012C22.7638 0.5489 21.9042 -0.0719664 21.015 0.333091Z" fill="white"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="soc1als__item">
+                                            <a 
+                                                class="soc1als__link" 
+                                                href="https://wa.me" 
+                                                target="_blank" 
+                                                aria-label="WhatsApp" 
+                                                title="WhatsApp"
+                                            >
+                                                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9031 16.0332C17.638 16.7836 16.5842 17.4044 15.7438 17.586C15.1685 17.7081 14.4183 17.8047 11.8905 16.7572C9.0514 15.581 5.109 11.3911 5.109 8.60283C5.109 7.1834 5.9274 5.53057 7.3585 5.53057C8.0471 5.53057 8.1989 5.54399 8.4255 6.08755C8.6906 6.72795 9.33741 8.30574 9.4144 8.46748C9.7323 9.13098 9.09099 9.51939 8.62569 10.0971C8.47719 10.2709 8.30891 10.4589 8.497 10.7824C8.684 11.0993 9.3308 12.1535 10.2812 12.9996C11.5088 14.0933 12.5043 14.4425 12.8607 14.5911C13.1258 14.7011 13.4426 14.6755 13.6362 14.4686C13.8815 14.2034 14.1862 13.7635 14.4964 13.3299C14.7153 13.0196 14.9936 12.9809 15.2851 13.0909C15.482 13.1591 17.9845 14.3213 18.0901 14.5073C18.1682 14.6426 18.1682 15.2828 17.9031 16.0332ZM11.5022 0.5H11.4967C5.43239 0.5 0.5 5.43389 0.5 11.5C0.5 13.9053 1.27551 16.1369 2.59441 17.9469L1.22381 22.0343L5.45111 20.6835C7.19021 21.8344 9.2659 22.5 11.5022 22.5C17.5665 22.5 22.5 17.5661 22.5 11.5C22.5 5.43389 17.5665 0.5 11.5022 0.5Z" fill="white"/>
+                                                </svg>
+                                                
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer__lang lang visible-mobile">
+                                    <div class="lang__item selected">RU</div>
+                                    <div class="lang__item">EN</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__extra-column">
+                        <div class="footer__contacts">
+                            <div class="footer__contact">
+                                <span>График работы:</span>
+                                <a class="phone" href="tel:89007777777" target="_blank">8 (900) 777-77-77</a>
+                                <a clas="mail" href="mailto:info@braver.ru">info@braver.ru</a>
+                            </div>
+                            <div class="footer__grafik">
+                                <span>Контакты:</span>
+                                <p>пн-пт с 9 до 18</p>
+                            </div>
+                            <div class="footer__address">
+                                <span>Адрес:</span>
+                                <p>г. Москва, ул. Тверская 44/1, каб. 6</p>
+                            </div>
+                        </div>
+
+                        <div class="footer__menu">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Каталог</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Сортиментовозы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Контейнеровозы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Зерновозы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Бортовые</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Шторно-бортовые</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__extra-column">
+                        <div class="footer__menu footer__menu-item-1">
+                            <ul class="footer__menu-list">
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">О заводе</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Новости</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Контакты</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Техника в наличии</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Доставка</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Сервисные центры</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Гарантийное обслуживание</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Документы и сертификаты</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Дилеры</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Отзывы</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Вакансии</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Лизинг</a>
+                                </li>
+                                <li class="footer__menu-item">
+                                    <a class="footer__menu-link" href="/">Trade-In</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__extra-column hidden-tablet-s">
+                        <a class="footer__callback button button--callback open-modal-link" href="#modal-callback">Заказать звонок</a>
+                        <div class="footer__lang lang">
+                            <div class="lang__item selected">RU</div>
+                            <div class="lang__item">EN</div>
+                        </div>
+                    </div>
+                    <div class="footer__extra-group visible-mobile">
+                        <div class="card-yandex">
+                            <div class="card-yandex__wrap">
+                                <img 
+                                    class="yandex__image"
+                                    src="./icons/yandex.svg" 
+                                    alt="" 
+                                    width="33" height="33"
+                                >
+                                <div class="rating-num">
+                                    4,4
+                                </div>
+                                <div class="rating-view">
+                                    <div 
+                                        class="rating-view__star is-active"
+                                        aria-label="Rating 5 star"
+                                        title="Rating 5 star"
+                                    >
+                                
+                                    </div>
+                                    <div class="rating-view__star is-active"></div>
+                                    <div class="rating-view__star is-active"></div>
+                                    <div class="rating-view__star is-active"></div>
+                                    <div class="rating-view__star"></div>
+                                </div>
+                            </div>
+                            <p>Рейтинг организации в Яндексе</p>
+                        </div>
+                        <div class="card-yandex__item">
+                            <div class="footer__soc1al">
+                                <ul class="soc1als__list">
+                                    <li class="soc1als__item">
+                                        <a 
+                                            class="soc1als__link" 
+                                            href="https://vk.com" 
+                                            target="_blank" 
+                                            aria-label="Vk" 
+                                            title="Vk"
+                                        >
+                                            <svg width="25" height="15" viewBox="0 0 25 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.1383 7.2265C14.6811 7.05626 14.6811 6.40606 14.6528 5.95328C14.5385 4.34047 15.1099 1.87824 14.4242 0.831412C13.9387 0.208384 11.5954 0.265435 10.1673 0.350558C9.7669 0.407608 9.28142 0.491827 8.93856 0.662073C8.59571 0.832319 8.25286 1.11485 8.25286 1.36932C8.25286 1.73698 9.11045 1.68083 9.42404 2.16169C9.7669 2.67152 9.7669 3.77449 9.7669 4.68006C9.7669 5.72689 9.59501 7.11421 9.16713 7.17036C8.50977 7.19843 8.13857 6.54733 7.79572 6.06648C7.11001 5.13284 6.42431 3.97191 5.90957 2.83995C5.65266 2.2459 5.50912 1.5948 5.13793 1.34034C4.5665 0.943703 3.53795 0.91563 2.53773 0.943703C1.62346 0.971775 0.308729 0.85858 0.0518181 1.39648C-0.148408 1.99053 0.280387 2.55651 0.508955 3.03827C1.68014 5.55664 2.93727 7.76441 4.48056 9.85807C5.90957 11.8105 7.25173 13.3671 9.88027 14.1876C10.6236 14.414 13.8802 15.0651 14.5376 14.1876C14.7661 13.848 14.7095 13.0837 14.8237 12.5177C14.938 11.9517 15.0807 11.3858 15.6237 11.3577C16.0809 11.3296 16.3378 11.7253 16.624 12.0088C16.9385 12.3203 17.1954 12.5748 17.4239 12.8582C17.967 13.3961 18.5384 14.1314 19.2241 14.4149C20.1668 14.8115 21.6241 14.6983 22.9955 14.6413C24.11 14.6132 24.91 14.3868 24.996 13.7357C25.0536 13.2259 24.4812 12.4905 24.1384 12.0658C23.2808 11.019 22.8812 10.7075 21.9094 9.74488C21.4806 9.32017 20.9375 8.86739 20.9375 8.35846C20.9092 8.04695 21.1661 7.76441 21.3946 7.4529C22.3949 5.98135 23.3951 4.93452 24.3093 3.40593C24.5663 2.95315 25.1669 1.90632 24.9384 1.39648C24.6815 0.830507 23.2524 0.999847 22.3665 0.999847C21.2237 0.999847 19.738 0.914724 19.4518 1.14112C18.9087 1.50877 18.6802 2.10373 18.4232 2.66971C17.8518 3.97191 17.0802 5.30128 16.2802 6.29196C15.994 6.63155 15.4519 7.33879 15.1373 7.2256L15.1383 7.2265Z" fill="white"/>
+                                            </svg>   
+                                        </a>
+                                        
+                                    </li>
+                                    <li class="soc1als__item">
+                                        <a 
+                                            class="soc1als__link" 
+                                            href="https://t.me" 
+                                            target="_blank" 
+                                            aria-label="Telegram" 
+                                            title="Telegram"
+                                        >
+                                            <svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21.015 0.333091L1.52726 7.89969C0.197304 8.43755 0.204998 9.18458 1.28326 9.51771L6.28654 11.0892L17.8627 3.73513C18.4101 3.39979 18.9102 3.58019 18.4991 3.94762L9.12013 12.4704H9.11793L9.12013 12.4715L8.775 17.6642C9.28061 17.6642 9.50373 17.4307 9.78731 17.1551L12.2175 14.7757L17.2725 18.5352C18.2045 19.052 18.8739 18.7864 19.1058 17.6664L22.4241 1.92012C22.7638 0.5489 21.9042 -0.0719664 21.015 0.333091Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="soc1als__item">
+                                        <a 
+                                            class="soc1als__link" 
+                                            href="https://wa.me" 
+                                            target="_blank" 
+                                            aria-label="WhatsApp" 
+                                            title="WhatsApp"
+                                        >
+                                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9031 16.0332C17.638 16.7836 16.5842 17.4044 15.7438 17.586C15.1685 17.7081 14.4183 17.8047 11.8905 16.7572C9.0514 15.581 5.109 11.3911 5.109 8.60283C5.109 7.1834 5.9274 5.53057 7.3585 5.53057C8.0471 5.53057 8.1989 5.54399 8.4255 6.08755C8.6906 6.72795 9.33741 8.30574 9.4144 8.46748C9.7323 9.13098 9.09099 9.51939 8.62569 10.0971C8.47719 10.2709 8.30891 10.4589 8.497 10.7824C8.684 11.0993 9.3308 12.1535 10.2812 12.9996C11.5088 14.0933 12.5043 14.4425 12.8607 14.5911C13.1258 14.7011 13.4426 14.6755 13.6362 14.4686C13.8815 14.2034 14.1862 13.7635 14.4964 13.3299C14.7153 13.0196 14.9936 12.9809 15.2851 13.0909C15.482 13.1591 17.9845 14.3213 18.0901 14.5073C18.1682 14.6426 18.1682 15.2828 17.9031 16.0332ZM11.5022 0.5H11.4967C5.43239 0.5 0.5 5.43389 0.5 11.5C0.5 13.9053 1.27551 16.1369 2.59441 17.9469L1.22381 22.0343L5.45111 20.6835C7.19021 21.8344 9.2659 22.5 11.5022 22.5C17.5665 22.5 22.5 17.5661 22.5 11.5C22.5 5.43389 17.5665 0.5 11.5022 0.5Z" fill="white"/>
+                                            </svg>
+                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__lang lang visible-mobile">
+                                <div class="lang__item selected">RU</div>
+                                <div class="lang__item">EN</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <p>Работаем по России и СНГ</p>
+                    <img 
+                        class="footer__image"
+                        src="./images/bg-footer.png" 
+                        alt="" 
+                        width="1560" height="180"loading="lazy"
+                    >
+                </div>
+                <div class="footer__copy">
+                    <a class="omni" href="#">Сделано в OMNI</a>
+                    <p class="copy">© <time datatime="2024">2024</time> BRAVER</p>
+                    <a class="privacy" href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal-callback" class="modal modal-callback" style="display: none;">
+        <div class="modal__content">
+            <div class="modal__body">
+                <div class="modal__block-title">
+                    <h2 class="modal__title h3">Заказать звонок</h2>
+                    <div class="modal__description">
+                        <p>Оставьте телефон, и мы свяжемся с Вами в течение 15 минут</p>
+                    </div>
+                </div>
+                <form class="feedback-form" action="/">        
+                    <div class="feedback-form__wrap">
+                        <div class="feedback-form__cell field">
+                            <input 
+                                class="field__control"
+                                id="phoneNumber"
+                                placeholder="+7 (___) ___-__-__"
+                                data-js-input-mask="{+7}(000) 000-00-00"
+                                required
+                            >
+                        </div>
+                        <div class="feedback-form__cell field">
+                            <input 
+                                class="field__control"
+                                id="company"
+                                placeholder="Название компании"
+                                required
+                            >
+                        </div>
+                    </div>
+                    <div class="feedback-form__cell">
+                        <div class="feedback-form__actions">
+                            <div class="feedback-form__agreement">
+                                <label class="checkbox">
+                                    <input 
+                                        class="checkbox__input"
+                                        type="checkbox"
+                                        required
+                                    >
+                                    <span class="checkbox__label">Нажимая на кнопку, я принимаю условия <a href="#">Политики конфиденциальности</a></span>
+                                </label>
+                            </div>
+                            <button 
+                                class="feedback-form__submit-button button button--arrow button--arrow-dark"
+                                type="submit"
+                            >Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <button class="modal__button button" id="close-modal">
+                <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6938 38.1936C12.8964 38.9909 11.6037 38.9909 10.8064 38.1936C10.0091 37.3963 10.0091 36.1035 10.8064 35.3062L21.6127 24.4999L10.8064 13.6936C10.0091 12.8963 10.0091 11.6036 10.8064 10.8062C11.6037 10.0089 12.8964 10.0089 13.6938 10.8062L24.5001 21.6126L35.3064 10.8062C36.1037 10.0089 37.3964 10.0089 38.1938 10.8062C38.9911 11.6036 38.9911 12.8963 38.1938 13.6936L27.3874 24.4999L38.1938 35.3062C38.9911 36.1036 38.9911 37.3963 38.1938 38.1936C37.3964 38.9909 36.1037 38.9909 35.3064 38.1936L24.5001 27.3873L13.6938 38.1936Z" fill="white"/>
+                </svg>                    
+            </button>
+        </div>
+    </div>
+
+    <div id="modal-request" class="modal modal-request" style="display: none;">
+        <div class="modal__content">
+            <div class="modal__body">
+                <div class="modal__block-title">
+                    <h2 class="modal__title h3">оставить заявку</h2>
+                    <div class="modal__description">
+                        <p>Оставьте Ваши данные, и мы свяжемся с вами в течение 15 минут</p>
+                    </div>
+                </div>
+                <form class="feedback-form" action="/">        
+                    <div class="feedback-form__cell field">
+                        <input 
+                            class="field__control"
+                            id="firstName"
+                            placeholder="Ваше имя"
+                            required
+                        >
+                    </div>
+                    <div class="feedback-form__cell field">
+                        <input 
+                            class="field__control"
+                            id="phoneNumber"
+                            placeholder="+7 (___) ___-__-__"
+                            data-js-input-mask="{+7}(000) 000-00-00"
+                            required
+                        >
+                    </div>
+                    <div class="feedback-form__cell field">
+                        <input 
+                            class="field__control"
+                            id="email"
+                            placeholder="Email"
+                            required
+                            type="email"
+                        >
+                    </div>
+                    <div class="feedback-form__cell field">
+                        <textarea 
+                            class="field__control"
+                            id="massage"
+                            placeholder="Ваш комментарий"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="feedback-form__cell">
+                        <div class="feedback-form__actions">
+                            <div class="feedback-form__agreement">
+                                <label class="checkbox">
+                                    <input 
+                                        class="checkbox__input"
+                                        type="checkbox"
+                                        required
+                                    >
+                                    <span class="checkbox__label">Нажимая на кнопку, я принимаю условия <a href="#">Политики конфиденциальности</a></span>
+                                </label>
+                            </div>
+                            <button 
+                                class="feedback-form__submit-button button button--arrow button--arrow-dark"
+                                type="submit"
+                            >Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <button class="modal__button button" id="close-modal">
+                <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.6938 38.1936C12.8964 38.9909 11.6037 38.9909 10.8064 38.1936C10.0091 37.3963 10.0091 36.1035 10.8064 35.3062L21.6127 24.4999L10.8064 13.6936C10.0091 12.8963 10.0091 11.6036 10.8064 10.8062C11.6037 10.0089 12.8964 10.0089 13.6938 10.8062L24.5001 21.6126L35.3064 10.8062C36.1037 10.0089 37.3964 10.0089 38.1938 10.8062C38.9911 11.6036 38.9911 12.8963 38.1938 13.6936L27.3874 24.4999L38.1938 35.3062C38.9911 36.1036 38.9911 37.3963 38.1938 38.1936C37.3964 38.9909 36.1037 38.9909 35.3064 38.1936L24.5001 27.3873L13.6938 38.1936Z" fill="white"/>
+                </svg>                    
+            </button>
+        </div>
+    </div>
+
+    <div id="modal-request--successful" class="modal modal-request--successful" style="display: none;">
+        <div class="modal__content">
+            <div class="modal__body">
+                <img 
+                    class="modal__img"
+                    src="./icons/green-like.svg" 
+                    alt="" 
+                    width="60" height="60" loading="lazy"
+                >
+                <div class="modal__block-title">
+                    <h2 class="modal__title h3">Заявка отправлена</h2>
+                    <div class="modal__description">
+                        <p>Наш менеджер свяжется с Вами в течение 15 минут</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal__button button button--dark" id="close-modal">
+                Закрыть                    
+            </button>
+        </div>
+    </div>
+
+    <div id="modal-request--error" class="modal modal-request--error" style="display: none;">
+        <div class="modal__content">
+            <div class="modal__body">
+                <img 
+                    class="modal__img"
+                    src="./icons/warning.svg" 
+                    alt="" 
+                    width="60" height="60" loading="lazy"
+                >
+                <div class="modal__block-title">
+                    <h2 class="modal__title h3">что-то пошло не так</h2>
+                    <div class="modal__description">
+                        <p>Попробуйте отправить заявку еще раз</p>
+                    </div>
+                </div>
+            </div>
+            <button class="modal__button button button--dark" id="close-modal">
+                Закрыть                    
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/7.6.1/imask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" ></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
