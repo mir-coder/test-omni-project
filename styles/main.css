@@ -1876,12 +1876,6 @@ button[aria-label]::before {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 555;
 }
-@media (width <= 47.99875rem) {
-  .modal {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .modal__content {
   display: flex;
   justify-content: center;
@@ -1904,7 +1898,12 @@ button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .modal__content {
-    margin: auto auto 0;
+    position: fixed;
+    margin: auto;
+    top: auto;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
 .modal__content p {
