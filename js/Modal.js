@@ -73,7 +73,7 @@ class Modal {
     }
 
     open(modal) {
-        modal.style.display = 'flex'; // Показываем модальное окно
+        modal.style.display = 'block'; // Показываем модальное окно
     }
 
     close(modal) {
