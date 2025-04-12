@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.parent-link{
+    @include circle;
+
+    padding-inline: rem(10) fluid-laptop(20, 12);
+    border-radius: rem(8);
+    position: relative;
+   
+    &::after{
+        background-color: var(--color-white);
+        
+        @include tablet{
+            background-color: var(--color-light-gray-20);
+        }
+    }
+}

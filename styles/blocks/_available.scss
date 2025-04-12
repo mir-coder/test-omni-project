@@ -1,0 +1,17 @@
+@use '../helpers' as *;
+
+.available{
+    position: absolute;
+    top: rem(20);
+    right: rem(30);
+    background-color: var(--color-white);
+    color: var(--color-dark);
+    padding: rem(8);
+    border-radius: rem(8);
+    font-size: rem(14);
+
+    @include tablet{
+        top: rem(12);
+        right: rem(22);
+    }
+}

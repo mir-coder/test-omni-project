@@ -1,0 +1,84 @@
+@use '../helpers' as *;
+
+.breadcrumbs {
+    padding-bottom: rem(20);
+    
+    &__list {
+        list-style: none; 
+        padding: 0; 
+        display: flex; 
+        overflow: hidden; 
+        white-space: nowrap;
+        
+        &:last-child{
+            @include mobile{
+                text-overflow: ellipsis;
+                overflow: hidden; 
+                white-space: nowrap;
+            }
+        }
+
+        @include mobile{
+            display: flex; 
+        }
+    }
+
+    &__item {
+        font-family: var(--font-family-base);
+        font-size: rem(18);
+        color: var(--color-dark);
+        white-space: nowrap; 
+        padding-right: rem(5);
+
+        &::before{
+            content: '❯';
+            font-size: rem(15);
+            margin-inline: rem(3);
+            color: var(--color-dark-opacity-40);
+        }
+
+        &:first-child{
+            &::before{
+                content: '';
+            }
+        }
+
+        &:last-child{
+            overflow: hidden;     
+            text-overflow: ellipsis;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1; 
+
+            &::before{
+                color: var(--color-dark);
+            }
+        }
+    
+        &.hidden {
+            display: none;
+        }
+
+        @include tablet{
+            font-size: rem(16);
+        }
+
+        @include mobile{
+            &:last-child {
+                text-overflow: ellipsis; 
+                overflow: hidden;
+                white-space: nowrap; 
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none; 
+        color: var(--color-dark-opacity-40);
+    }
+
+    &__dots {
+        margin-right: 5px;
+        color: var(--color-dark-opacity-40);
+    }
+}

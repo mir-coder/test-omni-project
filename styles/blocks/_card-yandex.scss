@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.card-yandex{
+    max-width: rem(262);
+    width: 100%;
+    background-color: var(--color-white-opacity-10);
+    padding: rem(15);
+    border-radius: rem(8);
+    margin-bottom: rem(20);
+
+    @include tablet{
+        padding: rem(10);
+    }
+    &__wrap{
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        font-size: rem(14);
+
+        @include tablet{
+            font-size: rem(12);
+        }
+    }
+    &__item{
+        @include tablet-s{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}

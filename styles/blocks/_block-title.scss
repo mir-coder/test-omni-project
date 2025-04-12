@@ -1,0 +1,7 @@
+@use '../helpers' as *;
+
+.block-title{
+    &__title{
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,135 @@
+@use '../helpers' as *;
+
+
+.button{
+    display: inline-flex;
+    justify-content: center;
+    min-width: rem(155);
+    padding: rem(12);
+    font-size: rem(18);
+    font-weight: 500;
+    white-space: nowrap;
+    border: none;
+    border-radius: rem(8);
+    right: 0;
+
+    @include tablet{
+        font-size: rem(16);
+    }
+
+    &__prev,
+    &__next{
+        --buttonSize: #{rem(48)};
+
+        @include square(var(--buttonSize));
+
+        background-color: var(--color-dark);
+        background-size: rem(14);
+        border-radius: 100%;
+
+        &::after{
+            content: '';
+            font-size: 0;
+            width: rem(8);
+            height: rem(14);
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include mobile{
+                height: rem(10);
+            }
+        }
+
+        @include mobile{
+            --buttonSize: #{rem(32)};
+        }
+    }
+
+    &--arrow{
+        max-width: 100%;
+        position: relative;
+        margin-right: rem(50);
+        padding: rem(16);
+
+        &::after{
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: rem(16);
+            border-radius: rem(8);
+            width: rem(48);
+            height: rem(48);
+            border-radius: rem(8);
+            right: rem(-48);
+            top: 0;
+
+            @include tablet{
+                height: rem(47);
+            }
+        }
+    }
+
+    &--arrow-dark{
+        color: var(--color-white);
+        background-color: var(--color-dark);
+        
+        &::after{
+            background-image: url('../../icons/arrow-white.svg');
+            background-color: var(--color-dark);
+        }
+
+        @include hover{
+            background-color: var(--color-gray);
+
+            &::after{
+                background-color: var(--color-gray);
+            }
+        }
+    }
+
+    &--arrow-gray{
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+
+        &::after{
+            background-image: url('../../icons/arrow-dark.svg');
+            background-color: var(--color-light-gray);
+        }
+
+        @include hover{
+            background-color: var( --color-dark-opacity-10);
+
+            &::after{
+                background-color: var( --color-dark-opacity-10);
+            }
+        }
+    }
+
+    &--callback{
+        background-color: var(--color-white);
+        color: var(--color-dark);
+
+        @include tablet{
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+
+        @include hover{
+            background-color: var(--color-white-opacity-70);
+        }
+    }
+}
+
+
+.swiper-button-next{
+    &::after{
+        background-image: url('../../icons/arrow-right.svg');
+    }
+}
+
+.swiper-button-prev{
+    &::after{
+        background-image: url('../../icons/arrow-left.svg');
+    }
+}

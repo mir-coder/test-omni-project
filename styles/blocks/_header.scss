@@ -1,0 +1,138 @@
+@use '../helpers' as *;
+
+.header{
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding-block: fluid-laptop(20, 10);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    animation-name: scrolling-header;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: rem(100) rem(200);
+
+    @keyframes scrolling-header {
+        to{
+            box-shadow: 0 0 1rem 0 var(--color-gray);
+        }
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: center;
+        column-gap: fluid-laptop(43, 15);
+
+        @include tablet{
+            justify-content: space-between;
+        }
+    }
+
+    &__overlay{
+        @include tablet-above{
+            display: contents;
+        }
+
+        @include tablet{
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            color: var(--color-dark);
+            background-color: var(--color-light-gray);
+            transition-duration: var(--transition-duration);
+            max-width: rem(600);
+            width: 100%;
+            margin-top: rem(44);
+            padding-top: rem(5);
+            right: 0;
+            height: 92vh;
+            overflow-y: auto;
+
+            &:not(.is-active){
+                @include hide;
+
+                translate: 100%;
+            }
+        }
+    }
+
+    &__menu{
+        background-color: var(--color-white-opacity-10);
+        border-radius: rem(8);
+
+        &-list{
+            display: flex;
+
+            @include tablet{
+                flex-direction: column;
+            }
+        }
+
+        &-link{
+            padding-block: rem(12);
+            padding-inline: fluid-laptop(13, 10);
+            font-size: fluid-laptop(18, 16);
+            font-weight: 400;
+
+            @include tablet{
+                width: 100%;
+                border-bottom: var(--border);
+                padding-block: rem(16);
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    width: 95%;
+                    height: rem(1);
+                    margin: auto;
+                    background-color: var(--color-light-gray-20);
+                }
+            }
+
+            @include hover{
+                color: var(--color-dark);
+                background-color: var(--color-white);
+                border-radius: rem(8);
+            }
+        }
+    }
+
+    &__contacts{
+        display: flex;
+        align-items: center;
+        font-size: fluid-laptop(18, 16);
+        margin-top: auto;
+        
+        @include tablet{
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: var(--color-white);
+            padding: rem(10);
+            gap: rem(16);
+        }
+    }
+
+    &__phone{
+        margin-right: fluid-laptop(20, 15);
+        
+        @include tablet{
+            order: 1;
+        }
+    }
+
+    &__callback{
+        margin-right: fluid-laptop(20, 5);
+       
+        @include tablet{
+            width: 100%;
+            margin: 0;
+            order: 3;
+        }
+    }
+}

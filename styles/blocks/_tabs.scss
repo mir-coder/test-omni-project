@@ -1,0 +1,66 @@
+@use '../helpers' as *;
+
+.tabs{
+    max-width: fluid-laptop(1034, 835);
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-light-gray);
+        border-radius: rem(8);
+        overflow: hidden;
+    }
+    
+
+    &__button{
+        @include circle;
+
+        padding-block: rem(15);
+        padding-inline: rem(35) rem(35);
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+        border: none;
+        font-size: rem(20);
+        font-weight: 500;
+        position: relative;
+
+        &::after{
+            background-color: var(--color-gray);
+            width: fluid-mobile(12, 10);
+            height: fluid-mobile(12, 10);
+            left: rem(13);
+            right: auto;
+        }
+        
+        @include laptop {
+            font-size: rem(18);
+        }
+
+        &.is-active{
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border-radius: rem(8);
+            pointer-events: none;
+            padding-left: fluid-mobile(70, 40);
+
+            &::after{
+                background-color: var(--color-white);
+                left: fluid(45, 20);
+            }
+        }
+    }
+
+    &__content{
+        background-color: var(--color-light-gray);
+        padding: rem(20);
+        border-radius: rem(8);
+        margin-top: rem(10);
+        &:not(.is-active){
+            display: none;
+        }
+
+        &:focus-visible{
+            outline-offset: -1rem;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@use '../helpers' as *;
+
+.summary{
+    font-family: var(--font-famoly-base);
+    padding: rem(20);
+    background-color: var( --color-light-gray);
+    border-radius: rem(8);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+
+    &__item{
+        padding-bottom: rem(15);
+        display: flex;
+        justify-content: space-between;
+        font-size: rem(20);
+
+        @include tablet{
+            font-size: rem(18);
+        }
+
+        &:last-child{
+            font-size: rem(18);
+            padding-bottom: 0;
+
+            @include tablet{
+                font-size: rem(16);
+            }
+        }
+
+        &:not(:last-child){
+            border-bottom: var(--border);
+            border-color: var(--color-dark-opacity-10);
+        }
+
+        span{
+            color: var(--color-dark);
+            font-weight: 500;
+        }
+    }
+
+    &__value{
+        span{
+            font-size: rem(32);
+
+            @include tablet{
+                font-size: rem(28);
+            }
+        }
+    }
+}

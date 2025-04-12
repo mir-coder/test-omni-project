@@ -1,0 +1,25 @@
+@use '../helpers' as *;
+
+.hero{
+    &__inner{
+        padding-inline: fluid(20, 0);
+        padding-top: fluid(20, 0);
+    }
+    &__item{
+        height: fluid(620, 314);
+        object-fit: cover;
+        border-radius: rem(8);
+        overflow: hidden;
+
+        @include mobile{
+            border-radius: 0 0 rem(8) rem(8);
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

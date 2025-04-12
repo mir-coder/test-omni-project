@@ -1,0 +1,85 @@
+@use '../helpers' as *;
+
+.catalog-details{
+    padding-bottom: fluid(100, 64);
+    &__inner{
+        column-gap: rem(20);
+        padding-top: rem(20);
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include mobile-above {
+            display: grid;
+            grid-template-columns: 65% auto;
+            grid-template-areas: 
+                'breadcrumbs aside'
+                'body aside';
+            column-gap: rem(20);
+        }
+
+        @include tablet-s{
+            grid-template-columns: 56% auto;
+            column-gap: rem(10);
+        }
+    }
+
+    &__breadcrumbs{
+        grid-area: breadcrumbs;
+
+        @include mobile{
+            order: 1;
+        }
+    }
+
+    &__body{
+        grid-area: body;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+
+        @include mobile{
+            order: 3;
+        }
+    }
+
+    &__block-title{
+        text-transform: uppercase;
+    }
+
+    &__info{
+       display: flex;
+       flex-direction: column;
+       row-gap: rem(16);
+    }
+
+    &__aside{
+        grid-area: aside;
+        max-width: rem(507);
+        width: 100%;
+        margin-left: auto;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+
+        @include mobile{
+            max-width: 100%;
+            order: 2;
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__actions{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+
+        @include tablet{
+            row-gap: rem(10)
+        }
+    }
+}

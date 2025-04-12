@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.has-submenu{
+    &:hover > .parent-link {
+        color: var(--color-dark);
+        background-color: var(--color-white);
+    }
+
+    &:hover > .parent-link::after{
+        background-color: var(--color-dark) ;
+    }
+}

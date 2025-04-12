@@ -1,0 +1,32 @@
+@use '../helpers' as *;
+
+.submenu{
+    display: none; 
+    position: absolute; 
+    z-index: 1000;
+    margin-top: rem(5); 
+    background-color: var(--color-white);
+    width: rem(260);
+    border-radius: rem(8);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+
+    @include tablet{
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        width: 100%;
+    }
+  
+    &__link{
+        color: var(--color-dark);
+        padding: rem(12);
+        width: 100%;
+        transition-duration: var(--transition-duration);
+
+        @include hover{
+            background-color: var(--color-dark);
+            color: var(--color-white);
+            border-radius: rem(8);
+        }
+    }
+}

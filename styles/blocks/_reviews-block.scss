@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.reviews-block{
+    &__inner{
+        display: flex;
+        align-items: start;
+        column-gap: rem(20);
+
+        @include tablet{
+            column-gap: rem(10);
+        }
+    }
+
+    &__title{
+        margin-bottom: rem(20);
+
+        @include tablet{
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__description{
+        font-size: fluid(18, 14);
+        margin-bottom: rem(10);
+    }
+
+    &__link{
+        color: var(--color-dark);
+        font-size: rem(18);
+
+        @include tablet{
+        font-size: rem(16);
+        }
+    }
+}

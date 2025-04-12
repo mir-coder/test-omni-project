@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.lang{
+    display: flex;
+    background-color: var(--color-white-opacity-10);
+    border-radius: rem(8);
+
+    &__item{
+        font-family: var(--font-family-base);
+        font-size: rem(16);
+        text-transform: uppercase;
+        font-weight: 400;
+        padding: fluid-laptop(12, 10);
+        transition-duration: var(--transition-duration);
+        color: var(--color-white-opacity-60);
+        cursor: pointer;
+
+        @include tablet{
+            color: var(--color-gray);
+        }
+
+        &.selected{
+            background-color: var(--color-white);
+            border-radius: rem(8);
+            color: var(--color-dark);
+            padding: rem(12) rem(8);
+
+            @include tablet{
+                background-color: var(--color-dark);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    @include tablet{
+        order: 2;
+    }
+}

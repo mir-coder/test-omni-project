@@ -1,0 +1,35 @@
+@use '../helpers' as *;
+
+.icon{
+    display: inline-flex;
+    align-items: center;
+
+    &::after{
+        --size: #{rem(48)};
+
+        @include square(var(--size));
+
+        content: '';
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: rem(16);
+
+        @include tablet {
+            --size: #{rem(46)};
+        }
+    }
+
+    &--white-arrow{
+        &::after{
+            background-image: url('../../icons/arrow.svg');
+            filter: invert(97%) sepia(1%) saturate(4940%) hue-rotate(197deg) brightness(118%) contrast(99%);
+        }
+    }
+
+    &--dark-arrow{
+        &::after{
+            background-image: url('../../icons/arrow.svg');
+        }
+    }
+}

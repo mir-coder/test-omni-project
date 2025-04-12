@@ -1,0 +1,167 @@
+@use '../helpers' as *;
+
+.accordion {
+    &__details {
+        &[open] {
+            .accordion{
+                &__summary{
+                    &--dark{
+                        color: var(--color-white);
+                        background-color: var(--color-dark);
+                    }
+
+                    &--light{
+                        padding-bottom: rem(15);
+                    }
+                }
+            }
+
+            .accordion__title {
+                position: relative;
+
+                &::before {
+                    background-image: url('../../icons/arrow-white.svg');
+                    rotate: 0deg;
+                }
+
+                &::after{
+                    background-color: var(--color-white);
+                }
+
+                &--light{
+                    &::before{
+                        background-color: var(--color-dark);
+                    }
+                }
+            }
+
+            & + .accordion__content {
+                grid-template-rows: 1fr;
+            }
+        }
+    }
+
+    &__summary {
+        color: var(--color-dark);
+        list-style: none;
+
+        &--dark{
+            background-color: var(--color-light-gray);
+            border-radius: rem(8);
+        }
+
+        &--light{
+            display: flex;
+            align-items: center;
+            column-gap: fluid(230, 10);
+            padding-block: rem(33);
+
+            @include tablet{
+                padding-block: rem(26);
+            }
+
+        }
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &__title {
+       position: relative;
+
+        &::before {
+            @include abs-y;
+
+            content: '';
+            right: rem(12);
+            background-image: url('../../icons/arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100%;
+            width: rem(10);
+            height: rem(10);
+            transition-duration: var(--transition-duration);
+        }
+
+        &--dark{
+            @include circle;
+
+            position: relative;
+            padding: rem(16) rem(12) rem(16) rem(32);
+            color: inherit;
+            font-size: rem(16);
+            overflow: hidden;
+            transition-duration: var(--transition-duration);
+
+            &::after{
+                background-color: var(--color-dark);
+                left: rem(16);
+                right: auto;
+            }
+        }
+
+        &--light{
+            width: 100%;
+            text-transform: uppercase;
+
+            &::before{
+                background-color: var(--color-light-gray);
+                background-position: center;
+                background-size: rem(12);
+                width: rem(43);
+                height: rem(43);
+                border-radius: rem(8);
+
+                @include mobile{
+                    background-size: rem(10);
+                    width: rem(32);
+                    height: rem(32);
+                }
+            }
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition-duration: 0.3s;
+
+        &-inner {
+            overflow: hidden;
+        }
+
+        &-body {
+            --offsetTop: #{rem(10)};
+
+            &--dark{
+                margin-top: var(--offsetTop);
+                padding: rem(12);
+                background-color: var(--color-light-gray);
+                border-radius: rem(8);
+            }
+
+            &--light{
+                margin-left: fluid(270, 33);
+                max-width: rem(527);
+                padding-bottom: rem(20);
+            }
+        }
+    }
+
+    &__num{
+        font-size: fluid(32, 20);
+        color: var(--color-gray);
+    }
+
+    &__light{
+       border-top: var(--border);
+       width: 100%;
+
+       &:last-child{
+        border-bottom: var(--border);
+       }
+    }
+}
+

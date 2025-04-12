@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.services-group{
+
+    &__info{
+        p{
+            margin-bottom: rem(10);
+        }
+        
+        span{
+            display: inline-block;
+            color: var(--color-dark);
+            font-weight: 500;
+            margin-bottom: rem(10);
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(10);
+            padding-left: rem(10);
+
+            li{
+                position: relative;
+                padding-left: rem(20);
+               
+                &::before{
+                    content: '';
+                    position: absolute;
+                    background-color: var(--color-gray);
+                    width: rem(4);
+                    height: rem(4);
+                    border-radius: 100%;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

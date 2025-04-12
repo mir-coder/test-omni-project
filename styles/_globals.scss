@@ -1,0 +1,106 @@
+@use 'helpers' as *;
+
+html {
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    line-height: 90%;
+    font-family: var(--font-family-base);
+    color: var(--color-gray);
+    font-size: rem(18);  
+    
+    @include tablet{
+        font-size: rem(16);
+    }
+}
+
+main{
+    flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+    font-family: var(--font-family-base);
+    color: var(--color-dark);
+    line-height: 100%;
+    font-weight: 400;
+}
+
+h1, .h1{
+    @include fluid-text(78, 36);
+}
+
+h2, .h2{
+    @include fluid-text(48, 24);
+}
+
+h3, .h3{
+    @include fluid-text(36, 20);
+}
+
+h4, .h4{
+    @include fluid-text(20, 16);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+button,
+label,
+input,
+textarea,
+select,
+a,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: inherit;
+
+    // @include hover{
+    //     color: var(--color-accent);
+    // }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+:focus-visible{
+    outline: rem(2) dashed var(--color-gray);
+    outline-offset: rem(4);
+    transition-duration: 0s !important;
+}
+
+a,
+button{
+    &[aria-label] {
+        position: relative;
+
+        &::before{
+            @include abs-center;
+            @include square(rem(44));
+
+            content: '';
+        }
+    }
+}

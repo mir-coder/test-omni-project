@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.soc1als{
+    @include flex-center;
+
+    &__list{
+        display: flex;
+        column-gap: rem(15);
+    }
+
+    &__item{
+        width: rem(43);
+        height: rem(43);
+        background-color: var(--color-white-opacity-10);
+        border-radius: rem(8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

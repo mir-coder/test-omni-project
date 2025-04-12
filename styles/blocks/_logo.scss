@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.logo{
+    max-width: rem(207);
+    width: 100%;
+
+    @include laptop{
+        max-width: rem(140)
+    }
+}
