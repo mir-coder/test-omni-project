@@ -12,11 +12,6 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 555; 
 
-    @include mobile{
-        display: flex;
-        flex-direction: column;
-    }
-
     &__content {
         @include flex-center; 
 
@@ -36,13 +31,17 @@
         }
 
         @include mobile{
-            margin: auto auto 0;
+            position: fixed;
+            margin: auto;
+            top: auto;
+            bottom: 0;
+            max-width: 100%;
+            width: 100%;
         }
         
         p{
             margin: 0;
         }
-        
     }
 
     &__block-title {
